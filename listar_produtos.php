@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  />
   <link rel="stylesheet" href="style.css">
   <title>Listar produtos</title>
 </head>
@@ -28,6 +29,7 @@
             <th scope="col">Categoria</th>
             <th scope="col">Quantidade</th>
             <th scope="col">Fornecedor</th>
+            <th scope="col">Ação</th>
 
           </tr>
         </thead>
@@ -61,6 +63,11 @@
             <td> <?php echo $categoria ?> </td>
             <td> <?php echo $qtd ?> </td>
             <td> <?php echo $fornecedor ?> </td>
+            <td>
+            <a class="btn btn-warning btn-sm"  href="editar_produto.php?id=<?php echo $id ?>" role="button">
+            <i class="fa-solid fa-pen-to-square"></i> Editar
+            </a>
+            </td>
 
             <?php  } ?>
 
