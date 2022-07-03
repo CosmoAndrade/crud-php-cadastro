@@ -27,7 +27,7 @@ include "conexao.php";
         <h2 class="text-center mt-4 mb-3">Formulário de Cadastro</h2>
 
     
-        <form action="_inserir_produto.php"  method="post" class=" w-50  mx-auto " >
+        <form action="_atualizar_produto.php"  method="post" class=" w-50  mx-auto " >
 
         <?php
 
@@ -52,6 +52,8 @@ include "conexao.php";
             <div class="form-group">
                 <label for="nro">Nro Produto</label>
              <input id="nro" class="form-control" type="number" name="nro" value="<?php echo $nro ?>" disabled>
+             <input id="nro" class="form-control" type="number" name="id" value="<?php echo $id ?>" style="display: none;">
+    
     
             </div>
 
@@ -63,7 +65,7 @@ include "conexao.php";
 
             <div class="form-group mt-3">
                 <label for="categoria">Categoria</label>
-                <select id="categoria" class="form-select" name="categoria" value="<?php echo $categoria ?>">
+                <select id="categoria" class="form-select" name="categoria" >
                     <option>Periféricos</option>
                     <option>Hardware</option>
                     <option>Software</option>
@@ -79,7 +81,7 @@ include "conexao.php";
 
             <div class="form-group mt-3">
                 <label for="categoria">Fornecedor</label>
-                <select id="fornecedor" class="form-select" name="fornecedor" value="<?php echo $fornecedor ?>">
+                <select id="fornecedor" class="form-select" name="fornecedor" >
                     <option>Fornecedor A</option>
                     <option>Fornecedor B</option>
                     <option>Fornecedor C</option>
