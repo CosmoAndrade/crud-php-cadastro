@@ -52,7 +52,7 @@ include "conexao.php";
             <div class="form-group">
                 <label for="nro">Nro Produto</label>
              <input id="nro" class="form-control" type="number" name="nro" value="<?php echo $nro ?>" disabled>
-             <input id="nro" class="form-control" type="number" name="id" value="<?php echo $id ?>" style="display: none;">
+        <input id="nro" class="form-control" type="number" name="id" value="<?php echo $id ?>" style="display: none;">
     
     
             </div>
