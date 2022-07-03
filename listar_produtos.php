@@ -1,10 +1,4 @@
-<?php
 
-
-
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,12 +18,12 @@
 
     <h3 class="text-center mt-4 mb-4">Lista de Produtos</h3>
 
-    <div class="w-50 mx-auto">
+    <div class="w-70 mx-auto">
 
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">NRO</th>
             <th scope="col">Nome</th>
             <th scope="col">Categoria</th>
             <th scope="col">Quantidade</th>
@@ -37,17 +31,41 @@
 
           </tr>
         </thead>
-        <tbody>
-          <tr>
-           
-            <td>1</td>
-            <td>Cosmo</td>
-            <td>Software</td>
-            <td>10</td>
-            <td>Fornecedor A</td>
-          </tr>
-         
-        </tbody>
+      
+      
+
+            <?php
+
+            include "conexao.php";
+
+            $sql = "SELECT * FROM `estoque` ";
+            $busca = mysqli_query($conexao,$sql);
+
+            while ($array = mysqli_fetch_array($busca)) {
+              
+              $id = $array['id'];
+              $nro = $array['nro'];
+              $nome = $array['nome'];
+              $categoria = $array['categoria'];
+              $qtd = $array['qtd'];
+              $fornecedor = $array['fornecedor'];
+
+
+            ?>
+
+
+            <tr>
+
+            <td> <?php echo $nro ?> </td>
+            <td> <?php echo $nome ?> </td>
+            <td> <?php echo $categoria ?> </td>
+            <td> <?php echo $qtd ?> </td>
+            <td> <?php echo $fornecedor ?> </td>
+
+            <?php  } ?>
+
+              
+            </tr>
 
       </table>
 
