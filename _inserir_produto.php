@@ -22,3 +22,23 @@ $sql = "INSERT INTO `estoque`( `nro`, `nome`, `categoria`, `qtd` ,`fornecedor`) 
 $inserir = mysqli_query($conexao,$sql);
 
 ?>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="style.css">
+
+<div class="container ">
+
+    <div class="w-50 mx-auto">
+
+
+    <h4 class="text-center mt-4">Produto Adicionado com sucesso!</h4>
+
+<a href="index.html"  class="btn  btn-primary mt-4">Cadastrar novo produto</a>
+
+    </div>
+
+    
+</div>
