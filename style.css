@@ -8,5 +8,13 @@
 
 body{
     font-family: Monolisa,Consolas, 'Courier New', monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.navbar-nav ul {
+    display: flex;
+    justify-content: end;
+}

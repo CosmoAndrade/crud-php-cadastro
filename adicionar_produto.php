@@ -1,14 +1,3 @@
-<?php
-
-include "conexao.php";
-
- $id = $_GET['id'];
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,51 +10,45 @@ include "conexao.php";
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.php">Home</a>
+         
+            <div class="navbar-nav">
+            
+              <a class="nav-link" href="adicionar_produto.php">Adicionar</a>
+              <a class="nav-link" href="listar_produtos.php">Listar</a>
+            
+             
+            </div>
+          </div>
+        
+      </nav>
+
 
     <div class="container ">
 
         <h2 class="text-center mt-4 mb-3">Formulário de Cadastro</h2>
 
     
-        <form action="_atualizar_produto.php"  method="post" class=" w-50  mx-auto " >
-
-        <?php
-
-            $sql = "SELECT * FROM `estoque` WHERE id = $id";
-            $buscar = mysqli_query($conexao,$sql);
-
-            while ($array = mysqli_fetch_array($buscar)) {
-                
-                $id = $array['id'];
-                $nro = $array['nro'];
-                $nome = $array['nome'];
-                $categoria = $array['categoria'];
-                $qtd = $array['qtd'];
-                $fornecedor = $array['fornecedor'];
-  
-          
-            
-
-        ?>
+        <form action="_inserir_produto.php"  method="post" class=" w-50  mx-auto " >
 
 
             <div class="form-group">
                 <label for="nro">Nro Produto</label>
-             <input id="nro" class="form-control" type="number" name="nro" value="<?php echo $nro ?>" disabled>
-        <input id="nro" class="form-control" type="number" name="id" value="<?php echo $id ?>" style="display: none;">
-    
+                <input id="nro" class="form-control" type="number" name="nro" placeholder="Insira o número do produto">
     
             </div>
 
             <div class="form-group mt-3">
                 <label for="nome">Nome Produto</label>
-                <input id="nome" class="form-control" type="text" name="nome" value="<?php echo $nome ?>" >
+                <input id="nome" class="form-control" type="text" name="nome" placeholder="Insira o nome do produto">
     
             </div>
 
             <div class="form-group mt-3">
                 <label for="categoria">Categoria</label>
-                <select id="categoria" class="form-select" name="categoria" >
+                <select id="categoria" class="form-select" name="categoria">
                     <option>Periféricos</option>
                     <option>Hardware</option>
                     <option>Software</option>
@@ -75,13 +58,13 @@ include "conexao.php";
 
             <div class="form-group mt-3">
                 <label for="qtd">Quantidade</label>
-                <input id="qtd" class="form-control" type="number" name="qtd" value="<?php echo $qtd ?>" >
+                <input id="qtd" class="form-control" type="number" name="qtd" placeholder="Insira a Quantidade do produto">
     
             </div>
 
             <div class="form-group mt-3">
                 <label for="categoria">Fornecedor</label>
-                <select id="fornecedor" class="form-select" name="fornecedor" >
+                <select id="fornecedor" class="form-select" name="fornecedor">
                     <option>Fornecedor A</option>
                     <option>Fornecedor B</option>
                     <option>Fornecedor C</option>
@@ -90,9 +73,9 @@ include "conexao.php";
             </div>
 
 
-            <button type="submit" class="btn btn-success mt-3">Atualizar</button>
+            <button type="submit" class="btn btn-success mt-3 mb-4">Cadastrar</button>
 
-            <?php  } ?>
+
         </form>
 
        
@@ -100,6 +83,11 @@ include "conexao.php";
        
         
     </div>
+
+    <footer class="bg-primary ">
+        <h4 class="text-center p-2 text-light ">&copy; Cosmo Andrade Felix</h4>
+    </footer>
+
     
 </body>
 </html>

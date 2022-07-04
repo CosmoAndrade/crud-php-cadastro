@@ -13,6 +13,22 @@
 
 <body>
 
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.php">Home</a>
+         
+            <div class="navbar-nav">
+            
+              <a class="nav-link" href="adicionar_produto.php">Adicionar</a>
+              <a class="nav-link" href="listar_produtos.php">Listar</a>
+            
+             
+            </div>
+          </div>
+        
+      </nav>
+
   <div class="container">
 
     <h3 class="text-center mt-4 mb-4">Lista de Produtos</h3>
@@ -82,6 +98,11 @@
 
 
   </div>
+
+  <footer class="bg-primary ">
+        <h4 class="text-center p-2 text-light ">&copy; Cosmo Andrade Felix</h4>
+    </footer>
+
 
 
 </body>

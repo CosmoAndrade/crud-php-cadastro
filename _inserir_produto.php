@@ -36,7 +36,7 @@ $inserir = mysqli_query($conexao,$sql);
 
     <h4 class="text-center mt-4">Produto Adicionado com sucesso!</h4>
 
-<a href="index.html"  class="btn  btn-primary mt-4">Cadastrar novo produto</a>
+<a href="index.php"  class="btn  btn-primary mt-4">Cadastrar novo produto</a>
 
     </div>
 
